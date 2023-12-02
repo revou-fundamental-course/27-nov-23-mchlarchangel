@@ -1,5 +1,3 @@
-
-
 function ubahJenisPerhitungan() {
   var jenisPerhitungan = document.getElementById("jenisPerhitungan").value;
   var inputLuas = document.getElementById("inputLuas");
@@ -41,6 +39,12 @@ function hitung() {
   if (jenisPerhitungan === "luas") {
     alas = parseFloat(document.getElementById("alas").value);
     tinggi = parseFloat(document.getElementById("tinggi").value);
+
+    if (isNaN(alas) || isNaN(tinggi)) {
+      alert("Masukkan nilai yang valid untuk alas dan tinggi");
+      return;
+    }
+
     hasil = (1 / 2) * alas * tinggi;
     inputLuas.style.display = "block";
     inputKeliling.style.display = "none";
@@ -52,6 +56,12 @@ function hitung() {
     sisiA = parseFloat(document.getElementById("sisiA").value);
     sisiB = parseFloat(document.getElementById("sisiB").value);
     sisiC = parseFloat(document.getElementById("sisiC").value);
+
+    if (isNaN(sisiA) || isNaN(sisiB) || isNaN(sisiC)) {
+      alert("Masukkan nilai yang valid untuk sisi a, b, dan c");
+      return;
+    }
+
     hasil = sisiA + sisiB + sisiC;
     inputLuas.style.display = "none";
     inputKeliling.style.display = "block";
@@ -79,40 +89,36 @@ function displayResult(calculationText, calculationResult) {
 
 function updateHistoryDisplay() {
   var historyElement = document.getElementById("history");
-  
-  var newHistoryHTML = ""; 
+
+  var newHistoryHTML = "";
 
   for (var i = calculationHistory.length - 1; i >= 0; i--) {
-    
     var historyItem = calculationHistory[i];
     newHistoryHTML +=
       "<p>" + historyItem.text + "<br>" + historyItem.result + "</p>";
   }
 
-  historyElement.innerHTML = newHistoryHTML; 
+  historyElement.innerHTML = newHistoryHTML;
 }
-
 
 ubahJenisPerhitungan();
 
 var calculationHistory = [];
 
 function reset() {
-  
   var confirmation = window.confirm("Apakah Anda yakin ingin mereset?");
 
   if (confirmation) {
-  document.getElementById("alas").value = "";
-  document.getElementById("tinggi").value = "";
-  document.getElementById("sisiA").value = "";
-  document.getElementById("sisiB").value = "";
-  document.getElementById("sisiC").value = "";
+    document.getElementById("alas").value = "";
+    document.getElementById("tinggi").value = "";
+    document.getElementById("sisiA").value = "";
+    document.getElementById("sisiB").value = "";
+    document.getElementById("sisiC").value = "";
 
-  document.getElementById("hasil").innerHTML = "";
-  document.getElementById("history").innerHTML = "";
-  calculationHistory = [];
-} else {
-
-  console.log("Reset dibatalkan.");
-}
+    document.getElementById("hasil").innerHTML = "";
+    document.getElementById("history").innerHTML = "";
+    calculationHistory = [];
+  } else {
+    console.log("Reset dibatalkan.");
+  }
 }

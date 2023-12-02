@@ -3,150 +3,178 @@
 }
 
 body {
-    margin: auto;
-    padding: 0;
-    font-family: "Open Sans", sans-serif;
-  }
-  
-  .bar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: lightblue;
-    color: white;
-    z-index: 1000; 
-  }
-  
-  
-  main {
-    max-width: 80%;
-    margin: 80px auto 0; 
-    padding: 40px;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  
-  .utama {
-    width: 45%; 
-    margin-right: 10px; 
-  }
-  
-  .input_section {
-    display: flex;
-    flex-direction: column;
-    padding: 40px;
-    border: 1px solid black;
-    border-radius: 10px;
-  }
-  
-  .jenisPerhitungan {
-    font-weight: bold ;
-    font-size: 20px;
-    text-align: center;
-  }
-  
-  #jenisPerhitungan {
-    margin-top: 17px;
-    margin-bottom: 5px;
-    padding: 10px;
-  }
-  
-  #rumusLuas > p {
-    font-size: 15px;
-    margin-top: -15px;
-    margin-bottom: 16px;
-  }
-
-  #rumusKeliling > p {
-    font-size: 15px;
-    margin-top: -15px;
-    margin-bottom: 16px;
-  }
-
-#inputLuas > #alas , #tinggi{
-    margin-top: 5px;
-    margin-bottom: 10px;
-    padding: 2px;
+  margin: auto;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
 }
 
-#inputKeliling > #sisiA , #sisiB {
-    margin-top: 5px;
-    margin-bottom: -10px;
-    padding: 2px;
+.bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: lightblue;
+  color: white;
+  z-index: 1000;
 }
 
-#inputKeliling > #sisiC{
-    margin-bottom: 10px;
+main {
+  margin: 80px auto 0;
+  max-width: 80%;
 }
 
-  .angka,
-  input {
-    display: flex;
-    justify-content: left;
-  }
-  
-  button {
-    margin-top: 10px;
-    margin-bottom: 5px;
-    padding: 5px;
-  }
-  
-  .hasil {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    padding: 40px;
-    border: 1px solid black;
-    border-radius: 10px;
-    width: 44%; 
-  }
+img {
+  display: flex;
+  margin-top: 20px;
+  width: 40%;
+}
 
-  .hasil > label{
-    margin-bottom: 5px;
-    font-weight: bold ;
-    font-size: 20px;
-  }
+.artikell {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  #hasil,
-  #history-container {
-    width: 100%; 
-    margin-bottom: 15px;
-  }
-  
-  #history-container {
-    height: 230px;
-    overflow: auto;
-  }
-  
+.artikell img {
+  max-width: 40%;
+}
 
-  #history{
-    margin-top: -15px;
-  }
+.artikell .artikel {
+  width: 55%;
+  padding: 20px;
+}
 
-  button.hitung{
-    font-weight: bold;
-    background-color: green;
-    color: aliceblue;
-    border: 0;
-    border-radius: 5px;
-    padding: 10px;
-    cursor: pointer;
-  }
+.semua {
+  margin-top: 0px;
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+}
 
-  button.reset{
-    font-weight: bold;
-    background-color: red;
-    color: aliceblue;
-    border: 0;
-    border-radius: 5px;
-    padding: 10px;
-    cursor: pointer;
-  }
+.utama {
+  width: 45%;
+  margin-right: 10px;
+}
 
-  button.reset:hover {
-    background-color: #d9534f;
-  }
+.input_section {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.jenisPerhitungan {
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
+
+#jenisPerhitungan {
+  margin-top: 17px;
+  margin-bottom: 5px;
+  padding: 10px;
+}
+
+#rumusLuas > p {
+  font-size: 15px;
+  margin-top: -15px;
+  margin-bottom: 16px;
+}
+
+#rumusKeliling > p {
+  font-size: 15px;
+  margin-top: -15px;
+  margin-bottom: 16px;
+}
+
+#inputLuas > #alas,
+#tinggi {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  padding: 2px;
+}
+
+#inputKeliling > #sisiA,
+#sisiB {
+  margin-top: 5px;
+  margin-bottom: -10px;
+  padding: 2px;
+}
+
+#inputKeliling > #sisiC {
+  margin-bottom: 10px;
+}
+
+.angka,
+input {
+  display: flex;
+  justify-content: left;
+}
+
+button {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  padding: 5px;
+}
+
+.hasil {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 40px;
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 44%;
+}
+
+.hasil > label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#hasil,
+#history-container {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+#history-container {
+  height: 230px;
+  overflow: auto;
+}
+
+#history {
+  margin-top: -15px;
+}
+
+button.hitung {
+  font-weight: bold;
+  background-color: lightblue;
+  color: aliceblue;
+  border: 0;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+button.hitung:hover {
+  background-color: lightseagreen;
+}
+
+button.reset {
+  font-weight: bold;
+  background-color: lightcoral;
+  color: aliceblue;
+  border: 0;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+button.reset:hover {
+  background-color: coral;
+}
